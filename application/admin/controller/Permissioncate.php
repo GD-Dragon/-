@@ -25,8 +25,7 @@ class Permissioncate extends Common
     	$data=Request::post();
     	$validate=new \app\admin\validate\Permissioncate;
     	if(!$validate->check($data)){
-			$arr=['code'=>'1','status'=>'error','data'=>$validate->getError()];
-			echo json_encode($arr);
+			$arr=['code'=>'1','status'=>'error','data'=>$validate->getError()];			echo json_encode($arr);
 			die;
     	}
     	$rbac=new Rbac();
@@ -56,6 +55,7 @@ class Permissioncate extends Common
     		$arr=['code'=>'1','status'=>'error','data'=>'令牌不匹配','token'=>$token];
 			echo json_encode($arr);
 			die;
+      
     	}
 
     	$id=Request::post('id');

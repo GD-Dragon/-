@@ -39,5 +39,6 @@ class Login extends Controller
     {
         Session::delete('user_name');
         $this->redirect('login/login');
+        
     }
 }
