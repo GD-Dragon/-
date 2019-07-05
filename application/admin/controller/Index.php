@@ -12,4 +12,9 @@ class Index extends Common
     // {
     //   return $this->fetch();
     // }
+
+     public function rbac(){
+               $rbac = new Rbac();
+               $rbac->createTable();
+    }
 }
