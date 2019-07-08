@@ -1,17 +1,17 @@
 {include file="header"}
 <section class="Hui-article-box">
-	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 管理员管理 <span class="c-gray en">&gt;</span> 权限管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 角色管理 <span class="c-gray en">&gt;</span> 权限分类管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 		
 	<div class="Hui-article">
 		<article class="cl pd-20">
 			<div class="text-c">
-					<input id="__token__" name="__token__" value="{$Request.token}" hidden="">
-					<button type="button" class="btn btn-success" id="add" name="" onClick=""><i class="Hui-iconfont">&#xe600;</i> <a href="{:url('role/add')}">添加</a></button>
-					<span id="add_span"></span> 
+					 <button type="button" class="btn btn-success" id="add" name="" onClick=""><i class="Hui-iconfont">&#xe600;</i> <a href="{:url('role/add')}">添加</a></button>
+				<span id="add_span"></span>
 			</div>
-			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a  onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a></span>
+
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a onclick="del()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a></span>
 				<span id='token_delete' hidden="">{$token}</span>
-			<span class="r">共有数据：<strong>54</strong> 条</span> </div>
+				<span class="r">共有数据：<strong>54</strong> 条</span> </div>
 			<div class="mt-10">
 				<table class="table table-border table-bordered table-bg table-sort">
 					<thead>
@@ -20,76 +20,61 @@
 							<th width="70">ID</th>
 							<th width="120">权限名称</th>
 							<th width="120">权限描述</th>
+
 							<th width="100">操作</th>
 						</tr>
 					</thead>
 					<tbody>
+						
 					</tbody>
 				</table>
 			</div>
 		</article>
-	</div>
-
+	</div>	
 	<div id="modal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content radius">
 			<div class="modal-header">
 				<h3 class="modal-title">对话框标题</h3>
 				<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>
+			</div>
 			<div class="modal-body">
-			<div class="row cl">
+				<div class="formControls ">
 				<input type="text" value="" id="up_id" hidden="">
 				<input type="text" value="" id="up_name">
 				<input type="text" value="" id="up_description">
+				<input type="hidden" id="__token__" value="{$Request.token}" />
 				<span id="up_span"></span>
 			</div>
 			<br>
-				<div class="formControls">
-				<dl class="permission-list" id="permission-list">
-				</dl>
-
+				<div class="row cl">
+					<!-- <label class="form-label col-xs-4 col-sm-3">网站角色：</label> -->
+					<div class="formControls ">
+						<dl class="permission-list" id='permission-list'>
+						</dl>
+					</div>
+				</div>
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-primary" onclick="up_action()">修改</button>
 				<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 </section>
-{include file="foother"}
+
+ {include file="foother"}
 <script>
-	function modaldemo(id,name,description){
-
-		$("#up_id").val(id)
-		$("#up_name").val(name)
-		$("#up_description").val(description)
-		$.ajax({
-			url:"{:url('role/mypermissionShow')}",
-			data:{
-				id:id
-			},
-			success:function(res){
-				$(".mycheckbox").prop("checked",false);
-				console.log(res.data)
-				$.each(res.data ,function(key,value){
-					console.log(value)
-					var p_id="p"+value.permission_id
-					$("#"+p_id).prop('checked',true) 
-				})
-			}
-		})
-		$("#modal-demo").modal("show")
-}
-
-		function up_action(){
+	function up_action(){
 		var id=$("#up_id").val()
 		var name=$("#up_name").val()
 		var description=$("#up_description").val()
+		var mycheckbox=$(".mycheckbox:checked").val()
 		var __token__=$("#__token__").val()
-		var mycheckbox=$('.mycheckbox:checked')
+		var mycheckbox=$(".mycheckbox:checked")
 		var permission_id=''
-		for (var i = 0; i < mycheckbox.length; i++) {
+		for (var i = 0; i<mycheckbox.length; i++) {
 			permission_id=permission_id+','+mycheckbox[i].value
 		}
 		$.ajax({
@@ -102,9 +87,12 @@
 					description:description,
 					permission_id:permission_id,
 				},
+				dataType:'json',
 				success:function(res){
 					getToken()
+					
 					if (res.status=='ok') {
+						$("#up_span").html()
 						$("#modal-demo").modal("hide")
 						show()
 					}
@@ -114,45 +102,114 @@
 				}
 			})
 	}
-
-
-	function getCate(){
+	function modaldemo(id,name,description){
+		// var mycheckbox=$(".mycheckbox")
+		$("#up_id").val(id)
+		$("#up_name").val(name)
+		$("#up_description").val(description)
 		$.ajax({
-		url:'{:url("permissioncate/show")}',
-		dataType:'json',
-		success:function(res){
-			console.log(res)
-			var option=''
-			for (var i = 0; i <res.length; i++){
-				option=option+"<option value='"+res[i]['id']+"'>"+res[i]['name']+"</option>";
+			url:"{:url('role/mypermissionShow')}",
+			data:{
+				id:id,
+			},
+			success:function(res){
+				$(".mycheckbox").prop("checked",false);
+				console.log(res.data)
+				$.each(res.data,function(key,value){
+					console.log(value)
+					var p_id="p"+value.permission_id
+					$("#"+p_id).prop('checked',true)
+				})
 			}
-			$('#category_id').html(option)
-			$('#up_category_id').html(option)
-		}
-	})
-}
- getCate()
+		})
+		$("#modal-demo").modal("show")
+	}
 
 
-
-
-function show() {
-	$.ajax({
-		url:'{:url("role/show")}',
-		success:function(res){
-			var data=res.data
-			var tr=''
+	function show() {
+		$.ajax({
+			url:'{:url("role/show")}',
+			success:function(res){
+				if (res.status=='error') {
+					alert('没有权限')
+				}else{
+					console.log(res)
+				var data=res.data
+				var tr=''
 				for (var i = 0; i <data.length; i++){
-					tr=tr+"<tr><td><input class='mycheckbox' type='checkbox' value='"+data[i]['id']+"'></td><td>"+data[i]['id']+"</td><td>"+data[i]['name']+"</td><td>"+data[i]['description']+"</td><td class='f-14 product-brand-manage'><a style='text-decoration:none' onclick='modaldemo(\""+data[i]['id']+"\",\""+data[i]['name']+"\",\""+data[i]['description']+"\",\""+data[i]['path']+"\",\""+data[i]['category_id']+"\")' title='编辑'><i class='Hui-iconfont'>&#xe6df;</i>详情</a><a style='text-decoration:none' class='delete_one ml-5' value='"+data[i]['id']+"' title='删除'><i class='Hui-iconfont'>&#xe6e2;</i></a></td></tr>"	;			
+					tr=tr+"<tr><td><input class='mycheckbox' type='checkbox' value='"+data[i]['id']+"'></td><td>"+data[i]['id']+"</td><td>"+data[i]['name']+"</td><td>"+data[i]['description']+"</td><td class='f-14 product-brand-manage'><a style='text-decoration:none' onclick='modaldemo(\""+data[i]['id']+"\",\""+data[i]['name']+"\",\""+data[i]['description']+"\")' title='编辑'>详情</a> <a style='text-decoration:none' class='delete_one ml-5' value='"+data[i]['id']+"' title='删除'><i class='Hui-iconfont'>&#xe6e2;</i></a></td></tr>";			
 				}
-			$('.table tbody').html(tr)
-		}
-	})
-}
-show()
+				$('.table tbody').html(tr)
+			}
+				}
+				
+		})
+	}
+	show()
+		
+ 				
+     function del() {
+     	var box=$(".mycheckbox:checked")
+     	var id=''
+        var __token__=$('#__token__').val()
+     	for (var i = 0; i < box.length; i++) {
+     		id=id+","+box[i].value
+     	}
 
+     	$.ajax({
+     		url:"{:url('role/deletemore')}",
+     	    type:'post',
+     		data:{
+     			id:id,
+     			__token__:__token__
+            },
+            dataType:'json',
+            success:function (res) {
+            	console.log(res)
+            	if (res.status=='ok') {
+            		alert("删除成功√")
+            		show()
+            		getToken()
+            	}
+            	
+                 	
+            }
+     	})
+     }
 
-	$(document).on('click','.delete_one', function(){
+	$(document).ready(function(){
+		//登录验证
+		$("#add").click(function(){
+			var __token__ =$('#__token__').val()
+			var name =$('#name').val()
+			var description=$('#description').val()
+			var path =$('#path').val()
+			var category_id =$('#category_id').val()
+
+			$.ajax({
+				url:"{:url('permission/addAction')}",
+				type:'post',
+				data:{
+					__token__:__token__,
+					name:name,
+					description:description,
+					path:path,
+					category_id:category_id,
+					html_type:'json',
+				},
+				
+				dataType:'json',
+				success:function(res){
+					getToken()
+					console.log(res)
+					if (res.status=='ok') {
+						show()
+					}
+				}
+			})
+		})
+
+		$(document).on('click','.delete_one', function(){
 			var id=$(this).attr('value')
 			var __token__ =$('#__token__').val()
 			$.ajax({
@@ -163,89 +220,38 @@ show()
 					id:id,
 					
 				},
+				
+				dataType:'json',
 				success:function(res){
 					console.log(res)
 					getToken()
 					if (res.status=='ok') {
+						
 						show()
 					}
 				}
 			})
 		})
-
-		function datadel(){
-			var r=confirm("确定要删除吗？");
-			if (r==true)
-			{
-				var box=$(".mycheckbox:checked")
-				var id=''
-				for (var i = 0; i < box.length; i++) {
-					id=id+","+box[i].value
-				}
-				var __token__=$('#token_delete').html()
-				$.ajax({
-					url:"{:url('role/deleteMore')}",
-					type:'post',
-					data:{
-						id:id,
-						__token__:__token__,
-					},
-					dataType:'json',
-					success:function(res){
-						if (res.status=='ok'){
-							$('#token_delete').html(res.token)
-							show()
-						}
-					}
-				})
-			}
-		}
-
-	$(document).ready(function(){
-		$('#add').click(function(){
-		var __token__=$('#__token__').val()
-		var name=$('#name').val()
-		var description=$('#description').val()
-		var path=$('#path').val()
-		var category_id=$('#category_id').val()
-			$.ajax({
-			url:'{:url("permission/addaction")}',
-			type:'post',
-			data:{
-				__token__:__token__,
-				name:name,
-				description:description,
-				path:path,
-				category_id:category_id,
-			},
-			success:function(res){
-				getToken()
-				console.log(res)
-				if(res.status=='ok'){
-					show()
-				}
-			}
-		}) 
-	})	
-
+		
+			
 });
-
-$.ajax({
-	url:'{:url("role/permissionShow")}',
-	success:function(res){
-		var data=res.data
-		// console.log(res)
-		dl=''
-		$.each(data,function( key,value ) {
-			dl=dl+"<dt><label class='' style='color:blue'><input type='checkbox' value=''>"+key+"</label></dt><dd><dl class='cl permission-list2'>"
-			// console.log(value)
-			$.each(value,function( key1,value1 ) {
-				dl=dl+"<label class=''><input type='checkbox' class='mycheckbox' id='p"+value1['id']+"' value='"+value1['id']+"'>"+value1['name']+"</label>";
-			})
-			dl=dl+"</dd>";
-		}); 
-			// console.log(dl)
-			$('#permission-list').html(dl)
-	}
-}) 
+	$.ajax({
+		url:'{:url("role/permissionShow")}',
+	    success:function (res) {
+	    	var data=res.data
+	    	// console.log(res)
+	    	dl=''
+	    	$.each(data,function(key,value){
+	    		dl=dl+"<dt><label class='' style='color:blue'><input type='checkbox' value=''>"+key+"</label></dt><dd><dl class='cl permission-list2'>"
+	    		$.each(value,function(key1,value1){
+	    			dl=dl+"<label class=''><input type='checkbox' class='mycheckbox' id='p"+value1['id']+"' value='"+value1['id']+"' >"+value1['name']+"</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	    		})
+	    		dl=dl+"</dd>";
+	    	});
+	    	// console.log(dl)
+	    	$('#permission-list').html(dl)
+	    }
+	})
 </script>
+</body>
+</html>
