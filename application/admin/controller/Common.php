@@ -21,7 +21,7 @@ use Request;
           $module=Request::module();           //当前模块名称
           $class = Request::controller();     //当前控制器名称
           $action=Request::action();       //当前操作名称
-          $arr_class=['Permission','Permissioncate','Role','User'];
+          $arr_class=['Permission','Permissioncate','Role','User','Brand'];
           $arr_action=['show','delete','addaction','updateaction'];
           // in_array() 函数搜索数组中是否存在指定的值。
           if (in_array($class, $arr_class)) {

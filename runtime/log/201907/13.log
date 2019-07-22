@@ -1,0 +1,446 @@
+---------------------------------------------------------------
+[2019-07-13T08:38:24+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.648794s] [吞吐率：1.54req/s] [内存消耗：1,590.43kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Brand.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:38:25+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.025692s] [吞吐率：38.92req/s] [内存消耗：1,590.41kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Brand.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:40:19+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.145490s] [吞吐率：6.87req/s] [内存消耗：1,721.65kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:40:24+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.022581s] [吞吐率：44.29req/s] [内存消耗：1,590.72kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Brand.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:40:25+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.034653s] [吞吐率：28.86req/s] [内存消耗：1,721.80kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:40:29+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/goodscate/list.html
+[运行时间：0.026083s] [吞吐率：38.34req/s] [内存消耗：1,590.72kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Goodscate.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:40:30+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.032136s] [吞吐率：31.12req/s] [内存消耗：1,721.80kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:40:32+08:00] 127.0.0.1 GET www.seemily.com/index.php/product-list.html
+[运行时间：0.033558s] [吞吐率：29.80req/s] [内存消耗：1,333.13kb] [文件加载：59]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-13T08:41:23+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.032100s] [吞吐率：31.15req/s] [内存消耗：1,721.80kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:41:26+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.021285s] [吞吐率：46.98req/s] [内存消耗：1,590.72kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Brand.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:43:49+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.035459s] [吞吐率：28.20req/s] [内存消耗：1,590.83kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Brand.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:43:49+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.031267s] [吞吐率：31.98req/s] [内存消耗：1,590.83kb] [文件加载：66]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [4]语法错误: unexpected 'list' (T_LIST), expecting identifier (T_STRING)[D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\controller\Brand.php:8]
+---------------------------------------------------------------
+[2019-07-13T08:44:02+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.025730s] [吞吐率：38.86req/s] [内存消耗：1,721.80kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:44:03+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.028415s] [吞吐率：35.19req/s] [内存消耗：1,722.09kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:44:27+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin
+[运行时间：0.044965s] [吞吐率：22.24req/s] [内存消耗：1,740.87kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\index\index.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:44:29+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/list.html
+[运行时间：0.051206s] [吞吐率：19.53req/s] [内存消耗：1,765.59kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\brand\list.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:44:29+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/brand/show.html
+[运行时间：0.367341s] [吞吐率：2.72req/s] [内存消耗：2,486.02kb] [文件加载：74]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin/brand/list.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.138367s ] mysql:host=129.28.166.112;dbname=login;charset=utf8
+[ sql ] [ SQL ] select * from brand [ RunTime:0.091325s ]
+---------------------------------------------------------------
+[2019-07-13T08:45:52+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/goodscate/list.html
+[运行时间：0.044252s] [吞吐率：22.60req/s] [内存消耗：1,746.59kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin/brand/list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\goodscate\list.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:45:53+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/goodscate/show.html
+[运行时间：0.260536s] [吞吐率：3.84req/s] [内存消耗：2,414.38kb] [文件加载：71]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin/goodscate/list.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.148308s ] mysql:host=129.28.166.112;dbname=login;charset=utf8
+[ sql ] [ SQL ] select * from goods_category [ RunTime:0.086334s ]
+---------------------------------------------------------------
+[2019-07-13T08:46:01+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/goodscate/product-list.html
+[运行时间：0.045011s] [吞吐率：22.22req/s] [内存消耗：1,693.18kb] [文件加载：71]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin/goodscate/list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[2019-07-13T08:46:02+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/goodscate/list.html
+[运行时间：0.026102s] [吞吐率：38.31req/s] [内存消耗：1,746.59kb] [文件加载：70]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin/brand/list.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\goodscate\list.html [ array (
+  0 => 'name',
+) ]
+---------------------------------------------------------------
+[2019-07-13T08:46:02+08:00] 127.0.0.1 GET www.seemily.com/index.php/admin/goodscate/show.html
+[运行时间：0.252933s] [吞吐率：3.95req/s] [内存消耗：2,414.38kb] [文件加载：71]
+[ info ] [ LANG ] D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=1otu48bf2u86c5mii2q3n2ag2f',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.seemily.com/index.php/admin/goodscate/list.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.seemily.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.132984s ] mysql:host=129.28.166.112;dbname=login;charset=utf8
+[ sql ] [ SQL ] select * from goods_category [ RunTime:0.088045s ]

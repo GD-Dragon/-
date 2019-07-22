@@ -1,0 +1,98 @@
+{include file="header"}
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商品管理 <span class="c-gray en">&gt;</span> 商品分类管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+		
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<div class="text-c">
+					<input id="__token__" name="__token__" value="{$Request.token}" hidden="">
+					<input type="file" id="file" >
+					<button type="button" class="btn btn-success" id="add" name="" onClick=""><i class="Hui-iconfont">&#xe600;</i> 添加</button>
+					<span id="add_span"></span> 
+			</div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a  onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
+				<a class="btn btn-primary radius" href= ><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span></span>
+			<span class="r">共有数据：<strong>54</strong> 条</span> </div>
+			<div class="mt-10">
+				<table class="table table-border table-bordered table-bg table-sort">
+					<thead>
+						<tr class="text-c">
+							<th width="25"><input type="checkbox" name="" value=""></th>
+							<th width="70">ID</th>
+							<th width="120">订单编号</th>
+							<th width="120">下单时间</th>
+							<th width="100">收货人</th>
+							<th width="100">总金额</th>
+							<th width="100">应付金额</th>
+							<th width="100">状态</th>
+							<th width="100">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</div>
+
+	<div id="modal-demo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content radius">
+			<div class="modal-header">
+				<h3 class="modal-title">对话框标题</h3>
+				<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>
+			</div>
+			<div class="modal-body">
+				<input type="text" value="" id="up_id" hidden="">
+				<input type="text" value="" id="up_name">
+				<span id="up_span"></span>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" onclick="up_action()">确定</button>
+				<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+			</div>
+		</div>
+	</div>	
+</div>
+</section>
+{include file="foother"}
+<script>
+
+	function show() {
+		
+		$.ajax({
+			url:'{:url("order/show")}',
+			type:'post',
+			data:{	
+			},
+			success:function(res){
+				var data=res.data
+				var tr=''
+				for (var i = 0; i <data.length; i++){
+					tr=tr+"<tr><td><input class='mycheckbox' type='checkbox' value='"+data[i]['id']+"'</td><td>"+data[i]['id']+"</td><td>"+data[i]['order_number']+"</td><td>"+data[i]['order_time']+"</td><td>"+data[i]['consignee']+"</td><td>"+data[i]['total_amount']+"</td><td>"+data[i]['amount_payable']+"</td><td>"+data[i]['status']+"</td><td class='f-14 product-brand-manage'><a style='text-decoration:none' onclick='modaldemo(\""+data[i]['id']+"\",\""+data[i]['name']+"\")' title='编辑'><i class='Hui-iconfont'>&#xe6df;</i></a> <a style='text-decoration:none' class='delete_one ml-5' onclick='del("+data[i]['id']+")' title='删除'><i class='Hui-iconfont'>&#xe6e2;</i></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href='{:url("order/test")}'><i class='Hui-iconfont'>&#xe644;</i></a></td></tr>";			
+				}
+				$('.table tbody').html(tr)
+			}
+		})
+	}
+	show()
+				$("#add").click(function(){
+					var file=$('file').val();
+					var formData=new FormData();
+					formData.append('file',$('#file')[0].files[0]);
+					$.ajax({
+						url:"{:url('order/test2')}",
+						type:'post',
+						data:formData,
+							name:name,
+							contentType:false,
+							processData:false,
+							cache:false,
+						dataType:'json',
+						success:function(res){
+							console.log(res)
+							show()
+						}
+					})
+				})
+</script>

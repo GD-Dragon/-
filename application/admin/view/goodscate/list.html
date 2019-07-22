@@ -1,0 +1,107 @@
+{include file="header"}
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 产品管理 <span class="c-gray en">&gt;</span> 分支管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+		
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<div class="text-c">
+					<input id="__token__" name="__token__" value="{$Request.token}" hidden="">
+					添加：
+					<span id="pid" value='0'>一级分类</span>
+					的子类
+					<input type="text" placeholder="名称" value="" class="input-text" style="width:120px" id="name">
+
+					<button type="button" class="btn btn-success" id="add" name="" onClick=""><i class="Hui-iconfont">&#xe600;</i> 添加</button>
+					<span id="add_span"></span> 
+			</div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20">
+				<span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i>批量删除</a></span>
+
+			<span class="r">共有数据：<strong>54</strong> 条</span> </div>
+
+			<div class="mt-10" id="mytree">
+
+			<ul style='list-style-type:block;'>
+				<li>123</li>
+			</ul>
+		</div>
+		</article>
+	</div>
+	
+</div>
+</section>
+{include file="foother"}
+<script>
+
+
+	function show(){
+		$.ajax({
+			url:'{:url("goodscate/show")}',
+			success:function(res){
+				$('#mytree').html(res)
+				$('ul ul').css('display','none')
+				$(document).on('click','li',function(){
+					pid_html=$(this).html()
+					pid=$(this).attr('value')
+					$("#pid").html(pid_html)
+					$("#pid").attr('value',pid)
+					var bool=$(this).next().css('display')
+					console.log(bool)
+					if(bool=='none'){
+						$(this).next().css('display','block')
+					}
+					if(bool=='block'){
+						$(this).next().css('display','none')
+					}
+				})
+
+			}
+		})
+	}
+	show()
+
+
+
+				$("#add").click(function(){
+					var __token__ =$('#__token__').val()
+					var name =$('#name').val()
+					var pid=$('#pid').attr('value')
+
+					$.ajax({
+						url:"{:url('goodscate/addAction')}",
+						type:'post',
+						data:{
+							pid:pid,
+							name:name,
+							__token__:__token__,
+						},
+						success:function(res){
+							getToken()
+							if(res.status=='ok'){
+								$('#id'+pid).next().append('<li value="'+res.data+'" id="id'+res.data+'">'+name+'</li>');
+							}
+						}
+					})
+				})
+
+			 function del(id){
+			 var __token__=$("#__token__").val()
+			 console.log(id)
+			 $.ajax({
+			 	url:"{:url('goodscate/del')}",
+			 	data:{
+			 		id:id,
+			 		__token__:__token__,
+			 	},
+			 	dataType:'json',
+			 	success:function(res){
+			 		if(res=='ok'){
+			 			$('#pid').attr('value','0')
+			 			$('#pid').html('一级分类')
+			 		}
+			 		getToken()
+			 		show()
+			 	}
+			 })
+			 }
+</script>
