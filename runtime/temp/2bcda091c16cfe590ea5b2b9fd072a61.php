@@ -1,4 +1,4 @@
-<?php /*a:3:{s:84:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\goodscate\list.html";i:1562900050;s:76:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\header.html";i:1563758491;s:77:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\foother.html";i:1562166675;}*/ ?>
+<?php /*a:3:{s:84:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\goodscate\list.html";i:1562900050;s:76:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\header.html";i:1563782410;s:77:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\foother.html";i:1562166675;}*/ ?>
 . <!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -103,6 +103,7 @@
 					<li><a href="<?php echo url('goodscate/list'); ?>" title="分类管理">分类管理</a></li>
 					<li><a href="<?php echo url('goods/list'); ?>" title="产品管理">产品管理</a></li>
 					<li><a href="<?php echo url('attrcategory/list'); ?>" title="属性管理">属性分类管理</a></li>
+					<li><a href="<?php echo url('order/list'); ?>" title="订单管理">订单管理</a></li>
 
 		</ul>
 	</dd>
