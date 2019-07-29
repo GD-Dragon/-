@@ -1,4 +1,4 @@
-<?php /*a:3:{s:87:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\attrcategory\list.html";i:1563418620;s:76:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\header.html";i:1563505880;s:77:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\foother.html";i:1562166675;}*/ ?>
+<?php /*a:3:{s:87:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\attrcategory\list.html";i:1563418620;s:76:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\header.html";i:1563782410;s:77:"D:\PHPstudy\PHPTutorial\WWW\03kj\shopping\application\admin\view\foother.html";i:1562166675;}*/ ?>
 . <!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -52,7 +52,7 @@
 				<ul class="cl">
 					<li>超级管理员</li>
 					<li class="dropDown dropDown_hover"> <a href="#" class="dropDown_A"><?php echo htmlentities($name); ?><i class="Hui-iconfont">&#xe6d5;</i></a>
-						<ul class="dropDown-menu menu radius box-shadow">
+						<ul class="dropDown-menu menu radius box-shadow"  style="margin: 0px;padding: 0px;">
 							<li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
 							<li><a href="#">切换账户</a></li>
 							<li><a href="<?php echo url('login/loginOut'); ?>">退出</a></li>
@@ -103,6 +103,7 @@
 					<li><a href="<?php echo url('goodscate/list'); ?>" title="分类管理">分类管理</a></li>
 					<li><a href="<?php echo url('goods/list'); ?>" title="产品管理">产品管理</a></li>
 					<li><a href="<?php echo url('attrcategory/list'); ?>" title="属性管理">属性分类管理</a></li>
+					<li><a href="<?php echo url('order/list'); ?>" title="订单管理">订单管理</a></li>
 
 		</ul>
 	</dd>
